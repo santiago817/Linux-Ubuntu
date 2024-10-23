@@ -1,0 +1,39 @@
+sudo apt update
+
+sudo apt install ispeak
+
+touch recordatorio.sh
+
+
+ls
+
+
+nano recordatorio.sh
+
+
+
+#!/bin/bash
+clear
+
+read -p "Tienes q actualizar Ubuntu (Precione Enter para continuar)"
+read -p "Ingrese el Tiempo (en segundos) que desee para volverlo a avisar :" tiempo
+
+sleep $tiempo
+
+
+espeak -v es "El Tiempo que Solicito Termino. Tiene que Actualizar Ubuntu."
+
+
+echo "Precione Enter para salir o Programar otro Recordatorio"
+read
+
+
+Ctrol + o (guardar) Ctrol + x (salir)
+
+
+
+chmod +x recordatorio.sh
+
+
+./recordatorio.sh
+
